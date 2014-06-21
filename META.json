@@ -36,7 +36,6 @@
       },
       "runtime" : {
          "requires" : {
-            "Carp" : "0",
             "perl" : "5.008005"
          }
       },
