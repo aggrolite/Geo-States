@@ -3,23 +3,27 @@ package Geo::States;
 use strict;
 use warnings;
 
+use utf8;
 use Carp ();
 
-our $VERSION = '0.02';
+our $VERSION = '0.03';
 
 # first, our giant data structure
 our %state_abbr = (
     us => {
         al => {text => 'Alabama',        capital => 'Montgomery'},
         ak => {text => 'Alaska',         capital => 'Juneau'},
+        as => {text => 'American Samoa', capital => 'Pago Pago'},
         az => {text => 'Arizona',        capital => 'Phoenix'},
         ar => {text => 'Arkansas',       capital => 'Little Rock'},
         ca => {text => 'California',     capital => 'Sacramento'},
         co => {text => 'Colorado',       capital => 'Denver'},
         ct => {text => 'Connecticut',    capital => 'Hartford'},
         de => {text => 'Delaware',       capital => 'Dover'},
+        dc => {text => 'District of Columbia', capital => undef },
         fl => {text => 'Florida',        capital => 'Tallahassee'},
         ga => {text => 'Georgia',        capital => 'Atlanta'},
+        gu => {text => 'Guam',           capital => 'Hagåtña'},
         hi => {text => 'Hawaii',         capital => 'Honolulu'},
         id => {text => 'Idaho',          capital => 'Boise'},
         il => {text => 'Illinois',       capital => 'Springfield'},
@@ -44,16 +48,19 @@ our %state_abbr = (
         ny => {text => 'New York',       capital => 'Albany'},
         nc => {text => 'North Carolina', capital => 'Raleigh'},
         nd => {text => 'North Dakota',   capital => 'Bismarck'},
+        mp => {text => 'Northern Mariana Islands', capital => 'Capitol Hill'},
         oh => {text => 'Ohio',           capital => 'Columbus'},
         ok => {text => 'Oklahoma',       capital => 'Oklahoma City'},
         or => {text => 'Oregon',         capital => 'Salem'},
         pa => {text => 'Pennsylvania',   capital => 'Harrisburg'},
+        pr => {text => 'Puerto Rico',    capital => 'San Juan'},
         ri => {text => 'Rhode Island',   capital => 'Providence'},
         sc => {text => 'South Carolina', capital => 'Columbia'},
         sd => {text => 'South Dakota',   capital => 'Pierre'},
         tn => {text => 'Tennessee',      capital => 'Nashville'},
         tx => {text => 'Texas',          capital => 'Austin'},
         ut => {text => 'Utah',           capital => 'Salt Lake City'},
+        vi => {text => 'Virgin Islands', capital => 'Charlotte Amalie'},
         vt => {text => 'Vermont',        capital => 'Montpelier'},
         va => {text => 'Virginia',       capital => 'Richmond'},
         wa => {text => 'Washington',     capital => 'Olympia'},
