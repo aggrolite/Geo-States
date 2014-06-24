@@ -75,10 +75,13 @@ our %state_abbr = (
         nb => {text => 'New Brunswick',             capital => 'Fredericton'},
         nl => {text => 'Newfoundland and Labrador', capital => q<St. John's>},
         ns => {text => 'Nova Scotia',               capital => 'Halifax'},
+        nt => {text => 'Northwest Territories',     capital => 'Yellowknife'},
+        nu => {text => 'Nunavut',                   capital => 'Iqaluit'},
         on => {text => 'Ontario',                   capital => 'Toronto'},
         pe => {text => 'Prince Edward Island',      capital => 'Charlottetown'},
         qc => {text => 'Quebec',                    capital => 'Quebec City'},
         sk => {text => 'Saskatchewan',              capital => 'Regina'},
+        yt => {text => 'Yukon',                     capital => 'Whitehorse'},
     },
 );
 
