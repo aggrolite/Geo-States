@@ -6,7 +6,7 @@ use warnings;
 use utf8;
 use Carp ();
 
-our $VERSION = '0.03';
+our $VERSION = '0.04';
 
 # first, our giant data structure
 our %state_abbr = (
