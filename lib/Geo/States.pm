@@ -95,7 +95,8 @@ sub new {
 
     $country = lc($country);
 
-    Carp::croak "Supported country codes include US and CA" unless $country eq 'us' || 'ca';
+    Carp::croak "Supported country codes include US and CA"
+        unless $country eq 'us' or $country eq 'ca';
 
     # we already have a hash written, this code will
     #   build the same hash with the names and abbrv. swapped
