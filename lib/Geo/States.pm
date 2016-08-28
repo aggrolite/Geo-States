@@ -122,15 +122,15 @@ sub find {
 
     # if we have already blessed code for this state, return it
     # this avoids redefining the same subroutines
-    return $objects{$state} if $objects{$state};
+    (my $subclass = $state) =~ s/\s/::/g;
+    return $objects{$subclass} if $objects{$subclass};
 
     my $data = length($state) == 2 ?    #
       $state_abbr{$country}{$state}
       : $state_name{$country}{$state}
       or return undef;
 
-    $state =~ s/\s/::/g;
-    my $class = ref($self) . "::$state";
+    my $class = ref($self) . "::$subclass";
 
     # and basically here I've done something similar
     #   to what I read in the Mojo::Base attributes code
@@ -141,7 +141,7 @@ sub find {
     }
     eval "$code;1" or Carp::croak "Geo::States error: $@";
     my $ref = bless(\$code, $class);
-    $objects{$state} = $ref;
+    $objects{$subclass} = $ref;
     $ref;
 }
 
