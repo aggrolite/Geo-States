@@ -2,6 +2,11 @@ Revision history for Geo-States
 
 {{$NEXT}}
 
+0.05  2016-09-02 21:52:50 PDT
+        -Suppress string warnings from D.C. and St. John's.
+        -Improve subroutine cache to prevent redef warnings.
+        -Correct Test::Pod::Coverage import.
+
 0.04  2014-07-03 09:57:24 PDT
         -Fix country code logic + test (thanks Mike Friedman)
         -Require Test::Exception for testing
